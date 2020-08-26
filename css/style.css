@@ -1,0 +1,161 @@
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+header {
+    text-align: center;
+    background-color: rgb(115, 115, 192);
+    font-weight: 700;
+    margin: 0;
+}
+h1 {
+    margin: 0;
+    padding-top: 1.2rem;
+    padding-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.2rem;
+}
+.header-description {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 1.2rem;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Links and Menus ========================= */
+
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 2px;
+    text-align: center;
+    margin: 2px;
+}
+
+li {
+    grid-column: span 2;
+    background-color: black;
+    border: 1px solid black;
+}
+
+li:nth-of-type(7),
+li:nth-of-type(8) {
+    grid-column: span 3;
+}
+li:nth-of-type(7) {
+    border-bottom-left-radius: 15px;
+}
+li:nth-of-type(8) {
+    border-bottom-right-radius: 15px;
+}
+
+li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    color:white;
+}
+
+.page-footer {
+    text-align: center;
+}
+
+
+footer small a {
+    color: black;
+}
+
+/* Main =================================== */
+h2 {
+    color: rgb(100, 143, 236);
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+article {
+    margin: 50px auto;
+    padding: 0px 5px;
+}
+
+.date {
+    margin: 5px 0px;
+    font-style: italic;
+    font-size: 1rem;
+}
+p {
+    font-size: 1.1rem;
+}
+
+/*  size > 800 */
+
+@media screen and (min-width: 800px) {
+.wrapper {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 20px;
+}
+h1, .header-description {
+    font-size: 1.2rem;
+    margin: 10px;
+}
+header {
+    text-align: right;
+    margin-top: 100px;
+    border: 1px solid grey;
+    border-top-right-radius: 15px;
+}
+ul {
+    display: list-item;
+}
+li:nth-of-type(7) {
+    border-bottom-left-radius: 0px;
+}
+li  {
+    border: 1px solid grey;
+    text-align: right;
+    padding: 5px;
+}
+.article-main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+}
+.article-main p {
+    margin: 10px;
+}
+.page-footer {
+    text-align: left;
+}
+}
+/* End of 800 query */
+
+@media screen and (min-width: 1200px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .article-main p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+header {
+    margin-top: 120px;
+}
+
+}
+
+/* End of 1200 query */
+
